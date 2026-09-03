@@ -14,6 +14,7 @@ Estado atual: **fase de documentação**. Nada foi programado ainda.
 - **@specs/site.md** — o que precisa ser construído (escopo, seções, funcionalidades, stack).
 - **@specs/design.md** — como deve parecer (paleta, tipografia, espaçamento, movimento).
 - **@specs/plano.md** — plano de implementação: mapa da página, componentes, riscos, ordem de execução.
+- **@specs/conteudo.md** — texto final PT-BR e EN de cada seção. Hoje inteiro `[DEMO]`.
 - **@imagens.md** — manifesto de imagens: qual imagem entra em cada seção e com que especificação.
 - **@memoria.md** — histórico vivo de decisões, problemas e próximos passos.
 

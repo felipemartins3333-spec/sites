@@ -42,6 +42,8 @@ Registro apenas o que ajuda na continuidade. Não registrar conversas inteiras.
 | 2026-09-03 | Análise visual refeita sobre o arquivo real e detalhada em `specs/design.md` §0 |
 | 2026-09-03 | Criados `specs/plano.md` (plano de implementação) e `imagens.md` (manifesto de imagens) |
 | 2026-09-03 | Marca de demonstração definida: **Sollis**, gestão inteligente de energia `[DEMO]` |
+| 2026-09-03 | Criado `specs/conteudo.md` com o texto completo PT-BR + EN, todo `[DEMO]` |
+| 2026-09-03 | Adicionados ao plano os passes de SEO (§13) e QA (§14), com itens bloqueantes |
 
 ## Problemas encontrados
 
@@ -79,7 +81,8 @@ Registro apenas o que ajuda na continuidade. Não registrar conversas inteiras.
 
 ## Pendências
 
-**Bloqueiam conteúdo**
+**Bloqueiam conteúdo** — destravadas em demonstração por `specs/conteudo.md`,
+mas todas continuam obrigatórias antes de publicar.
 - [ ] Nome do produto/empresa e o que ele faz em uma frase
 - [ ] Setor de atuação e restrições regulatórias
 - [ ] Três diferenciais verificáveis

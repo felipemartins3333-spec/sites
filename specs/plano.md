@@ -485,7 +485,7 @@ assets/
     hero/  trilhas/  produto/  logos/  og/
 imagens.md                    manifesto de imagens
 specs/
-  site.md  design.md  plano.md
+  site.md  design.md  plano.md  conteudo.md
 referências - site/
 memoria.md
 CLAUDE.md
@@ -521,6 +521,12 @@ vale concatenar à mão. JS em módulos carrega em paralelo e cada arquivo é pe
 | SEO | title, description, OG, dados estruturados | `[DEMO]` |
 
 Tudo isso em duas línguas. O texto em EN é adaptação, não tradução literal.
+
+**O texto já está escrito.** As duas versões completas — headlines, parágrafos,
+rótulos, marcadores, mensagens de erro do formulário, FAQ, rodapé, `alt` de cada
+imagem e metadados de SEO — estão em `specs/conteudo.md`, marcadas `[DEMO]`.
+Preço e dados cadastrais ficaram `[A DEFINIR]` de propósito: são consequentes demais
+para inventar, mesmo em demonstração.
 
 ---
 
@@ -615,7 +621,72 @@ estrutura já aprovada em `specs/site.md` §10.
 
 ---
 
-## 13. O que ainda falta
+## 13. SEO on-page
+
+Escopo de `specs/site.md` §14. Sem terceiros, sem script de rastreamento na primeira dobra.
+
+**Por página** — `<title>` até 60 caracteres, `description` até 155, canônica
+absoluta, `og:title`, `og:description`, `og:image` (1200×630), `og:locale`,
+`twitter:card="summary_large_image"`. Textos finais em `specs/conteudo.md` §1.
+
+**Bilíngue** — `hreflang` cruzado nas duas páginas mais `x-default` apontando para a
+PT-BR. Cada página se autorreferencia no `hreflang`, senão o Google ignora o par.
+Sem redirecionamento automático por idioma do navegador (`specs/site.md` §4).
+
+**Dados estruturados** — dois blocos `application/ld+json`: um `Organization` e um
+`FAQPage` alimentado pelas mesmas sete perguntas visíveis na seção 8. Texto idêntico
+ao da página: marcação que descreve conteúdo que o usuário não vê é penalizada.
+
+**Arquivos de apoio** — `sitemap.xml` com as 6 URLs e `hreflang` por entrada;
+`robots.txt` apontando para o sitemap; `site.webmanifest` com ícones.
+
+**Semântica que o SEO herda de graça** — um `<h1>` por página, hierarquia sem saltos,
+`alt` real em toda imagem informativa, âncoras com texto descritivo (nunca "clique
+aqui"). Isso já está exigido pela acessibilidade; o ganho de busca é subproduto.
+
+**Enquanto durar a fase `[DEMO]`** — `robots.txt` com `Disallow: /` e
+`<meta name="robots" content="noindex">` nas duas páginas. Conteúdo fictício indexado
+é o mesmo risco R-02 por outra porta. As duas linhas saem no commit que substitui o
+conteúdo, não antes.
+
+---
+
+## 14. QA — o que precisa passar antes de publicar
+
+Lista de verificação da etapa 11. Os itens marcados **bloqueiam a publicação**.
+
+**Bloqueantes**
+- [ ] **`grep -r data-demo` volta vazio.** Nenhum conteúdo de demonstração no ar.
+- [ ] Nenhum nome de norma real (ISO, SOC, PCI) sem o certificado em mãos.
+- [ ] `noindex` e `Disallow: /` removidos — e removidos só agora.
+- [ ] Preço, CNPJ, razão social e endereço preenchidos ou ausentes, nunca inventados.
+- [ ] Contraste verificado por cálculo em todos os pares, inclusive o texto sobre a
+      foto do hero, medido na região exata onde ele cai.
+
+**Funcional**
+- [ ] Navegação inteira só com teclado, do skip-link ao último link do rodapé.
+- [ ] Drawer prende o foco, fecha com `Esc` e devolve o foco ao botão que o abriu.
+- [ ] Abas navegam por ← → e Home/End, com `aria-selected` correto.
+- [ ] Acordeão opera por Enter e Espaço; abrir um não fecha os outros.
+- [ ] Formulário: erro descrito em texto, ligado por `aria-describedby`, com ícone
+      além da cor; sucesso anunciado em `aria-live`.
+- [ ] Scrollspy marca a seção ativa com `aria-current`, não só com cor.
+
+**Responsivo** — sem scroll horizontal e sem sobreposição em 320, 375, 414, 768,
+1024, 1440 e 1920. Alvo de toque de 44px, e 48px nos campos.
+
+**Desempenho** — medição real, não estimativa: LCP < 2,0s, INP < 200ms, CLS < 0,05,
+primeira dobra < 500KB, página < 1,5MB, menos de 30 requisições, JS próprio < 30KB.
+
+**Acessibilidade** — leitor de tela em uma seção de cada tipo; zoom em 200% e 400%;
+simulação de daltonismo nas seções que usam cobre e teal juntos;
+`prefers-reduced-motion` desliga todas as entradas.
+
+**Paridade PT/EN** — checklist de `specs/conteudo.md` §12.
+
+---
+
+## 15. O que ainda falta
 
 **Só você pode responder**
 1. Categoria e nome reais do produto — ou o aval para seguir com Sollis como demonstração.
