@@ -137,7 +137,8 @@ Se já existir manual de marca, ele substitui esta seção inteira.
 
 | Token | Hex | Uso |
 |---|---|---|
-| `--accent-600` | `#C2551F` | Botão primário, estados ativos |
+| `--accent-600` | `#C2551F` | ⚠️ Ver alerta abaixo. Texto grande, bordas e ícones |
+| `--accent-700` | `#AD4A1A` | `[PROPOSTO]` Botão primário e texto sobre fundo claro |
 | `--accent-500` | `#E0692C` | Hover do primário, detalhes |
 | `--accent-100` | `#FBE7D8` | Fundo de destaque suave, badges |
 
@@ -154,6 +155,15 @@ Se já existir manual de marca, ele substitui esta seção inteira.
 |---|---|---|
 | `--success` | `#1E7A4B` | Confirmação de formulário |
 | `--error` | `#B3261E` | Erro de validação |
+
+> **⚠️ Alerta de contraste, verificado por cálculo em 2026-09-03.**
+> `--accent-600` `#C2551F` dá **4,26:1** sobre `--paper-50` e **3,87:1** sobre
+> `--paper-100`. O mínimo para texto normal é 4,5:1, então **o botão primário em
+> bloco claro reprova em WCAG AA** com este token.
+> `--accent-700` `#AD4A1A` foi calculado como correção: mesmo matiz (19,9°),
+> **5,21:1** sobre `--paper-50` e **4,74:1** sobre `--paper-100`. Passa nos dois.
+> `--accent-600` segue válido onde o mínimo é 3:1 — texto grande, bordas, ícones.
+> Aguardando aprovação do cliente. Detalhes em `specs/plano.md` §12, risco R-01.
 
 **Regras de cor**
 - Nunca `#000000` nem `#FFFFFF` como fundo ou texto.
@@ -176,14 +186,17 @@ espessura `1px`. Nada de linhas duplas ou ornamentos.
 
 ## 4. Tipografia
 
-`[A DEFINIR]` — pendente de aprovação. Recomendação abaixo.
+`[PROPOSTO]` — definida em 2026-09-03 sob autorização do cliente. Substituível
+quando houver manual de marca.
 
-**Recomendação `[PROPOSTO]`**: duas famílias, ambas auto-hospedadas em `woff2`.
+Duas famílias, ambas auto-hospedadas em `woff2`, subsetadas para latim.
 
 | Papel | Família | Pesos | Observação |
 |---|---|---|---|
-| Títulos | Geral sem-serifa de traço largo e formas abertas | 500, 600 | Nunca 700+. Peso alto engrossa demais em corpos grandes. |
-| Corpo / interface | Sem-serifa neutra com boa legibilidade em 15–17px | 400, 500 | Precisa ter numerais tabulares. |
+| Títulos | **Schibsted Grotesk** | 500, 600 | Grotesca de traço largo e formas abertas, licença OFL. Nunca 700+: peso alto engrossa demais em corpos grandes. |
+| Corpo / interface | **Inter** | 400, 500 | Legibilidade comprovada em 15–17px e numerais tabulares, exigidos pelas telas de dados. |
+
+Quatro faces no total, que é o teto. Nenhum peso novo entra sem remover outro.
 
 Alternativa `[PROPOSTO]`: uma serifa contemporânea nos títulos com sem-serifa no
 corpo — dá mais personalidade e afasta mais da referência, ao custo de um pouco

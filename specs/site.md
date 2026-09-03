@@ -49,6 +49,16 @@ Pendente de definição pelo cliente:
 sem origem confirmada pelo cliente. Textos provisórios devem ficar visivelmente
 marcados como placeholder.
 
+**Exceção autorizada em 2026-09-03** — o cliente autorizou a criação de conteúdo
+fictício de demonstração para destravar o planejamento e a implementação. Vale sob
+três condições, todas obrigatórias:
+1. Todo conteúdo inventado é marcado `[DEMO]` na documentação e recebe o atributo
+   `data-demo` no HTML.
+2. Nada marcado `[DEMO]` pode ir ao ar. É item bloqueante de QA.
+3. A regra acima volta a valer integralmente assim que as informações reais chegarem.
+
+A marca de demonstração e o conteúdo estão definidos em `specs/plano.md` §1 e §10.
+
 ## 4. Idiomas
 
 `[APROVADO]` PT-BR + EN, com seletor de idioma.

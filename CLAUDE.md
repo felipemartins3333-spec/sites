@@ -13,9 +13,11 @@ Estado atual: **fase de documentação**. Nada foi programado ainda.
 
 - **@specs/site.md** — o que precisa ser construído (escopo, seções, funcionalidades, stack).
 - **@specs/design.md** — como deve parecer (paleta, tipografia, espaçamento, movimento).
+- **@specs/plano.md** — plano de implementação: mapa da página, componentes, riscos, ordem de execução.
+- **@imagens.md** — manifesto de imagens: qual imagem entra em cada seção e com que especificação.
 - **@memoria.md** — histórico vivo de decisões, problemas e próximos passos.
 
-Leia os três antes de qualquer trabalho de implementação.
+Leia todos antes de qualquer trabalho de implementação.
 
 ## Regra de conflito (obrigatória)
 
@@ -29,6 +31,9 @@ Leia os três antes de qualquer trabalho de implementação.
 - Não remova uma decisão aprovada silenciosamente.
 - Não invente informações comerciais, médicas ou técnicas sobre o produto.
   Se o dado não existe nos specs, use um marcador explícito `[A DEFINIR]` e me pergunte.
+  **Exceção autorizada em 2026-09-03**: conteúdo fictício de demonstração é permitido,
+  desde que marcado `[DEMO]` na documentação e `data-demo` no HTML. Nada marcado assim
+  pode ir ao ar. Ver @specs/site.md §3.
 - Sempre preserve a consistência visual e estrutural entre as seções.
 - Antes de uma mudança grande, apresente um plano resumido e espere aprovação.
 - Depois de uma decisão importante aprovada, atualize @memoria.md.
