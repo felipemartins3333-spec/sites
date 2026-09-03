@@ -10,7 +10,8 @@ Marcadores: `[APROVADO]` decidido · `[PROPOSTO]` aguardando confirmação · `[
 
 Material analisado em `referências - site/`:
 - `revolut.md` — arquivo com o link: https://www.revolut.com/pt-BR/
-- Print completo da página (captura de página inteira, versão PT-BR).
+- `screencapture-revolut-pt-BR-2026-09-03-18_43_20.png` — captura da página
+  inteira, 1366 × 6157 px, versão PT-BR. Analisada em quatro faixas.
 
 ### O que foi observado
 
@@ -23,11 +24,17 @@ divisória: a mudança de fundo é o separador. Blocos de respiro em branco puro
 com pouquíssimo conteúdo, funcionam como pausas entre os blocos densos.
 
 **Hierarquia**
-Contraste de escala muito agressivo: headline enorme contra corpo de texto
-pequeno, sem tamanhos intermediários. Cada bloco carrega uma única mensagem,
-um único parágrafo curto de apoio e um único botão. O hero é o único bloco
-alinhado à esquerda; do segundo bloco em diante quase tudo é centralizado,
-o que dá sensação de catálogo de produto.
+Contraste de escala muito agressivo: headline enorme (~72px no hero, ~52px nas
+seções) contra corpo de texto pequeno (~15–16px), sem tamanhos intermediários.
+Cada bloco carrega uma única mensagem, um parágrafo curto de apoio e um botão.
+Onde há obrigação legal, aparece um terceiro nível: uma nota em ~12px, cinza de
+baixo contraste, logo abaixo do parágrafo — a densidade regulatória é sempre
+empurrada para o menor tamanho disponível.
+
+Alinhamento: o hero é alinhado à esquerda, a maior parte das seções é
+centralizada, e uma seção editorial ("O porto seguro do seu dinheiro") quebra o
+padrão com texto à esquerda em ~5 colunas e o objeto à direita. Essa quebra é o
+único respiro de assimetria da página.
 
 **Tipografia**
 Sans-serif geométrica de traço largo, com kerning apertado nos títulos e peso
@@ -54,10 +61,19 @@ O produto aparece em ângulo e sangra para fora do quadro. Cartões de interface
 flutuam sobre a fotografia como sobreposições.
 
 **Interface e detalhes**
-Botões em formato de pílula, altura contida, texto curto. Abaixo de várias
-seções há um controle segmentado de pílulas (chips) que troca conteúdo sem sair
-da seção. Cantos arredondados em todos os cartões e mockups. Nenhuma sombra
-pesada; a separação vem do contraste de fundo.
+Botões em formato de pílula, altura contida (~48px), texto curto de 2 a 3
+palavras, peso medium. Em bloco claro são pretos com texto branco; em bloco
+escuro, brancos com texto preto — sempre sólidos, nunca contornados.
+
+Chips de filtro aparecem em duas posições: sobre a imagem do produto ("Cartões
+físicos" / "Cartões virtuais") e abaixo dela ("Aventura" / "Casamento" /
+"Mudança"). São pílulas contornadas em branco translúcido, com a ativa
+preenchida em branco sólido. Servem para trocar o conteúdo sem sair da seção.
+
+Cantos arredondados em todos os cartões e mockups. Cartões de interface
+flutuando sobre a foto usam vidro translúcido com borda de 1px. Nenhuma sombra
+pesada: a separação vem do contraste de fundo. O header não aparece na captura
+— provavelmente transparente sobre o hero.
 
 **Tom**
 Aspiracional e confiante, com frases curtas e diretas. Nada de jargão técnico
@@ -69,6 +85,8 @@ na superfície; toda a complexidade regulatória é empurrada para o rodapé.
 - Blocos full-bleed alternando claro/escuro como mecanismo de ritmo.
 - Uma mensagem, um parágrafo e um CTA por bloco.
 - Contraste de escala agressivo entre título e corpo.
+- Hierarquia de três níveis de texto: título, parágrafo de apoio e nota legal
+  em micro-tipografia — nunca no meio do caminho.
 - Botões em pílula e controle segmentado para trocar conteúdo dentro da seção.
 - Fotografia ampla e atmosférica combinada com tratamento tridimensional do produto.
 - Densidade concentrada apenas no rodapé.

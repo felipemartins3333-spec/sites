@@ -34,12 +34,14 @@ Registro apenas o que ajuda na continuidade. Não registrar conversas inteiras.
 |---|---|
 | 2026-09-03 | Criada a pasta `referências - site/` com `revolut.md` (link do site de referência) |
 | 2026-09-03 | Criados `CLAUDE.md`, `specs/site.md`, `specs/design.md` e `memoria.md` |
+| 2026-09-03 | Cliente subiu o print da referência (1366 × 6157 px) direto no branch |
+| 2026-09-03 | Análise visual refeita sobre o arquivo real e detalhada em `specs/design.md` §0 |
 
 ## Problemas encontrados
 
-1. **Imagem da referência não pôde ser salva no repositório.**
-   O print foi colado no chat e o caminho enviado era local do navegador
-   (`chrome-extension://…`), sem arquivo correspondente no ambiente.
+1. **Resolvido — imagem da referência não chegava ao repositório.** O print
+   colado no chat não tinha arquivo correspondente no ambiente, e o caminho
+   enviado era local do navegador (`chrome-extension://…`).
 2. **Ambiente sem acesso à internet aberta.** A política de rede bloqueia
    `revolut.com`, então não foi possível capturar o site automaticamente.
 3. **Nenhuma informação real sobre o produto foi fornecida.** Isso trava a
@@ -49,9 +51,10 @@ Registro apenas o que ajuda na continuidade. Não registrar conversas inteiras.
 
 ## Soluções aplicadas
 
-1. A análise visual da referência foi feita a partir do print exibido no chat e
-   registrada por escrito em `specs/design.md` §0 — assim o conhecimento fica no
-   repositório mesmo sem o arquivo de imagem.
+1. O cliente subiu o PNG direto no branch pelo GitHub. O arquivo foi integrado
+   por merge e a análise visual foi refeita sobre ele, fatiado em quatro faixas.
+   O resultado está escrito em `specs/design.md` §0 — o conhecimento fica no
+   repositório, não só no arquivo de imagem.
 2. O link ficou versionado em `referências - site/revolut.md`.
 3. Tudo que depende do produto foi marcado como `[A DEFINIR]` em vez de inventado,
    conforme a regra de não inventar informações.
@@ -78,7 +81,7 @@ Registro apenas o que ajuda na continuidade. Não registrar conversas inteiras.
 - [ ] Domínio e hospedagem
 - [ ] Ferramenta de analytics
 - [ ] Texto das páginas legais (Privacidade e Termos)
-- [ ] Salvar o print da referência como arquivo na pasta de referências
+- [x] Salvar o print da referência como arquivo na pasta de referências
 - [ ] Decidir se a pasta `referências - site/` é renomeada para `referencias/`
 
 ## Próximos passos
